@@ -1,6 +1,4 @@
-# Project Name
-
-WhitePuma Open Source Platform - Wallets endpoint
+# WhitePuma Open Source Platform - Wallets endpoint
 
 This project is the lower layer of the platform. You need to put it
 in the same host where you have your wallet daemon.
