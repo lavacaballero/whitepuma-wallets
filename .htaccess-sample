@@ -1,0 +1,36 @@
+#
+# Wallet Daemon Configuration file.
+# 
+# @package    Crypto Currency Platform
+# @subpackage Wallets endpoint API
+# @copyright  2013 Alejandro Caballero
+# @author     Alejandro Caballero - lava.caballero@gmail.com
+# @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# THE SOFTWARE.
+#
+
+
+php_value zlib.output_compression_level 5
+php_flag zlib.output_compression On
+
+<FilesMatch "\.inc$|\.tpl$|\.xml$">
+deny from all
+</FilesMatch>
+
+Options -Indexes
+
+ReWriteEngine On
+ReWriteBase /
+
+# Add here the rewrite rules for every coin being supported
+ReWriteRule ^Bitcoin /?coin_name=Bitcoin [QSA,L]
