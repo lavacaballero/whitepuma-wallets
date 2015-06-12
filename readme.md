@@ -18,7 +18,7 @@ Please check the next repos for more information:
 ## Requirements
 
 * Apache 2 with rewrite module
-* PHP 5.3+ with mcrypt
+* PHP 5.3+ with mcrypt, curl and zlib
 
 ## Installation
 
@@ -38,6 +38,7 @@ Please check the next repos for more information:
 6. Rename the `config-sample.php` file to `config.php` using the exact name you specified on .htaccess.
 
 7. Upload these scripts and configure a virtual host on Apache to serve the pages.
+   **Note:** you must configure the *AllowOverride* directive to **all** on the vhost section.
 
 8. Visit http://your.ip/CoinName/ and you will get a nasty "ERROR:NO_PUBLIC_KEY_PROVIDED" message.
    If so, then you're ready to start receiving requests from the Backend.
